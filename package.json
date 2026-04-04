@@ -1,0 +1,41 @@
+{
+  "name": "bff-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:ci": "pnpm install --frozen-lockfile",
+    "security:axios": "pnpm list axios",
+    "security:audit": "pnpm audit --prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "overrides": {
+      "axios": "1.14.0"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "dependencies": {
+    "@pothos/core": "^4.12.0",
+    "@pothos/plugin-dataloader": "^4.4.3",
+    "dataloader": "^2.2.3",
+    "fastify": "^5.8.4",
+    "graphql": "^16.13.2",
+    "graphql-yoga": "^5.18.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^6.2.1",
+    "@graphql-codegen/typed-document-node": "^6.1.7",
+    "@graphql-codegen/typescript": "^5.0.9",
+    "@graphql-codegen/typescript-operations": "^5.0.9",
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
