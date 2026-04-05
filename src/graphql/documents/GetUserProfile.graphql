@@ -1,0 +1,11 @@
+query GetUserProfile($id: ID!) {
+  userProfile(id: $id) {
+    id
+    displayName
+    email
+    birthday
+    membershipLabel
+    isDormant
+    lastLoginAt
+  }
+}
