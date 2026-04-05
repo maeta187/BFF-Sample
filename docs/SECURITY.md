@@ -36,11 +36,11 @@ allowBuilds: {}
 
 ```json
 {
-  "pnpm": {
-    "overrides": {
-      "axios": "1.14.0"
-    }
-  }
+	"pnpm": {
+		"overrides": {
+			"axios": "1.14.0"
+		}
+	}
 }
 ```
 
