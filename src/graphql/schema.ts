@@ -1,4 +1,5 @@
-import { builder } from './builder.js';
-import './modules/user.js';
+import { builder } from '@/graphql/builder.js'
+import '@/graphql/modules/user.js'
 
-export const schema = builder.toSchema();
+// 実処理は module 側にある
+export const schema = builder.toSchema()

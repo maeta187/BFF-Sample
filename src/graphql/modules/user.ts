@@ -1,5 +1,5 @@
-import { builder } from '../builder.js';
-import { findCurrentUser } from '../../data/users.js';
+import { findCurrentUser } from '@/data/users.js';
+import { builder } from '@/graphql/builder.js';
 
 const User = builder.objectRef<{
   id: string;

@@ -1,6 +1,6 @@
 import Fastify from 'fastify';
 
-import { graphqlPlugin } from './plugins/graphql.js';
+import { graphqlPlugin } from '@/plugins/graphql.js';
 
 export function buildApp() {
   const app = Fastify({

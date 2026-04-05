@@ -1,7 +1,7 @@
 import DataLoader from 'dataloader';
 import type { FastifyReply, FastifyRequest } from 'fastify';
 
-import { findUsersByIds, type UserRecord } from '../data/users.js';
+import { findUsersByIds, type UserRecord } from '@/data/users.js';
 
 export interface Loaders {
   userById: DataLoader<string, UserRecord | null>;

@@ -1,8 +1,8 @@
 import type { FastifyPluginAsync, FastifyReply, FastifyRequest } from 'fastify';
 import { createYoga } from 'graphql-yoga';
 
-import { createGraphQLContext, type ServerContext } from '../graphql/context.js';
-import { schema } from '../graphql/schema.js';
+import { createGraphQLContext, type ServerContext } from '@/graphql/context.js';
+import { schema } from '@/graphql/schema.js';
 
 const DEFAULT_GRAPHQL_PATH = '/graphql';
 
