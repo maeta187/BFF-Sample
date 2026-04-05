@@ -1,17 +1,17 @@
-import Fastify from 'fastify';
+import Fastify from 'fastify'
 
-import { graphqlPlugin } from '@/plugins/graphql.js';
+import { graphqlPlugin } from '@/plugins/graphql.js'
 
 export function buildApp() {
-  const app = Fastify({
-    logger: true,
-  });
+	const app = Fastify({
+		logger: true
+	})
 
-  app.get('/healthz', async () => {
-    return { ok: true };
-  });
+	app.get('/healthz', async () => {
+		return { ok: true }
+	})
 
-  app.register(graphqlPlugin);
+	app.register(graphqlPlugin)
 
-  return app;
+	return app
 }

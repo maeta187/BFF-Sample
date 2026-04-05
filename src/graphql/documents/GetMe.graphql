@@ -1,8 +1,8 @@
 query GetMe {
-  me {
-    id
-    name
-    email
-  }
-  requestId
+	me {
+		id
+		name
+		email
+	}
+	requestId
 }

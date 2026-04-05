@@ -1,0 +1,24 @@
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"plugins": ["typescript", "unicorn", "oxc", "import"],
+	"categories": {
+		"correctness": "error",
+		"suspicious": "error",
+		"pedantic": "off",
+		"perf": "off",
+		"restriction": "off",
+		"style": "off",
+		"nursery": "off"
+	},
+	"options": {
+		"maxWarnings": 0,
+		"reportUnusedDisableDirectives": "warn"
+	},
+	"rules": {
+		"import/no-cycle": "error",
+		"import/no-self-import": "error",
+		"import/no-duplicates": "error",
+		"import/no-unassigned-import": "off"
+	},
+	"ignorePatterns": ["dist/**", "node_modules/**", "src/graphql/generated.ts"]
+}

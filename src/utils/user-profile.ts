@@ -7,14 +7,14 @@ export type MembershipTierCode = 'free' | 'pro' | 'enterprise'
  * @returns GraphQL レスポンスで利用する表示用ラベル。
  */
 export function toMembershipLabel(tierCode: MembershipTierCode): string {
-  switch (tierCode) {
-    case 'enterprise':
-      return 'Enterprise'
-    case 'pro':
-      return 'Pro'
-    default:
-      return 'Free'
-  }
+	switch (tierCode) {
+		case 'enterprise':
+			return 'Enterprise'
+		case 'pro':
+			return 'Pro'
+		default:
+			return 'Free'
+	}
 }
 
 /**
@@ -31,21 +31,21 @@ export function toMembershipLabel(tierCode: MembershipTierCode): string {
  * @returns 休眠の場合は `true`、それ以外は `false`。
  */
 export function isDormant(
-  lastLoginAt: string | null,
-  dormantDays: number = 90,
-  now: Date = new Date()
+	lastLoginAt: string | null,
+	dormantDays: number = 90,
+	now: Date = new Date()
 ): boolean {
-  if (!lastLoginAt) {
-    return true
-  }
+	if (!lastLoginAt) {
+		return true
+	}
 
-  const lastLoginTime = new Date(lastLoginAt).getTime()
+	const lastLoginTime = new Date(lastLoginAt).getTime()
 
-  if (Number.isNaN(lastLoginTime)) {
-    return true
-  }
+	if (Number.isNaN(lastLoginTime)) {
+		return true
+	}
 
-  const dormantMs = dormantDays * 24 * 60 * 60 * 1000
+	const dormantMs = dormantDays * 24 * 60 * 60 * 1000
 
-  return now.getTime() - lastLoginTime > dormantMs
+	return now.getTime() - lastLoginTime > dormantMs
 }

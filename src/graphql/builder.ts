@@ -1,9 +1,9 @@
-import SchemaBuilder from '@pothos/core';
+import SchemaBuilder from '@pothos/core'
 
 export interface GraphQLSchemaTypes {
-  Context: import('./context.js').GraphQLContext;
+	Context: import('./context.js').GraphQLContext
 }
 
-export const builder = new SchemaBuilder<GraphQLSchemaTypes>({});
+export const builder = new SchemaBuilder<GraphQLSchemaTypes>({})
 
-builder.queryType({});
+builder.queryType({})
